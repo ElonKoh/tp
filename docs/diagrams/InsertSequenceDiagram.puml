@@ -3,8 +3,8 @@ actor User
 activate Flashcard
 User -> CommandInsertCode : executeCommand()
 activate CommandInsertCode
-CommandInsertCode -> UI : showToUser()
-activate UI
+CommandInsertCode -> Ui : showToUser()
+activate Ui
 return
 CommandInsertCode -> Flashcard : insertCodeSnippet(int, String)
 deactivate CommandInsertCode
